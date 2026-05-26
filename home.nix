@@ -9,10 +9,19 @@
   programs.home-manager.enable = true;
 
   programs.git = {
-    enable = true;
-    userName = "Navin";
-    userEmail = "navinsunil06@gmail.com";
+  enable = true;
+
+  settings = {
+    user = {
+      name = "Navinsunil";
+      email = "navinsunil06@gmail.com";
+    };
+
+    init.defaultBranch = "main";
+    pull.rebase = false;
   };
+};
+
 
   home.packages = with pkgs; [
     # terminal stuff
@@ -70,9 +79,9 @@
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
       update = "sudo nix flake update && sudo nixos-rebuild switch --flake /etc/nixos#nixos";
       gs = "git status";
-      vimconfig = "sudo vim /etc/nixos/configuration.nix";
-      homeconfig = "sudo vim /etc/nixos/home.nix";
-      flakeconfig = "sudo vim /etc/nixos/flake.nix";
+      vimconfig = "sudo nvim /etc/nixos/configuration.nix";
+      homeconfig = "sudo nvim /etc/nixos/home.nix";
+      flakeconfig = "sudo nvim /etc/nixos/flake.nix";
     };
 
     interactiveShellInit = ''
@@ -94,11 +103,7 @@
     };
   };
 
-  programs.git.extraConfig = {
-    init.defaultBranch = "main";
-    pull.rebase = false;
-  };
-
+  
   home.sessionVariables = {
     EDITOR = "nvim";
     TERMINAL = "kitty";
