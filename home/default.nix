@@ -15,6 +15,7 @@
      ./noctalia
      ./hyprlock
      ./hypridle
+     ./swaync
      ./programs
   ];
 }
