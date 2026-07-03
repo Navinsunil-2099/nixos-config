@@ -1,5 +1,3 @@
-
-```nix
 { ... }:
 
 {
@@ -159,6 +157,13 @@
       set -g fish_greeting
       fastfetch
     '';
+
+    functions.fish_prompt = ''
+      set_color --bold green
+      printf '[%s@%s:%s]$ ' $USER (prompt_hostname) (prompt_pwd)
+      set_color normal
+    '';
+
   };
 
 
@@ -291,4 +296,4 @@
     };
   };
 }
-```
+
