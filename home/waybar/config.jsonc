@@ -1,0 +1,83 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 28,
+  "spacing": 0,
+
+  "modules-left": [
+    //"custom/launcher", 
+    "custom/nixos",
+    "clock",
+    //"niri/workspaces",
+     "niri/window"],
+  "modules-center": ["niri/workspaces"],
+  "modules-right": ["pulseaudio", "cpu", "memory", "network", "battery", "tray"],
+
+  //"custom/launcher": {
+    //"format": "󰣇",
+    //"on-click": "wofi --show drun",
+    //"tooltip": false
+//  },
+
+  "niri/workspaces": {
+        "format": "{value}"
+  },
+
+  "niri/window": {
+    "format": "{title}",
+    "max-length": 60,
+    "separate-outputs": false
+},
+
+  "custom/nixos": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "wofi --show drun"
+},
+
+  "clock": {
+  "format": "{:%A, %d %B | %H:%M}",
+  "tooltip": true
+},
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": " 0%",
+    "on-click": "pavucontrol",
+    "tooltip": true
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+    "on-click": "kitty -e btop --force-utf",
+    "tooltip": true
+  },
+
+  "memory": {
+    "format": " {percentage}%",
+    "on-click": "kitty -e btop --force-utf",
+    "tooltip": true
+  },
+
+  "network": {
+  "format-wifi": "󰤨",
+  "format-ethernet": "󰈀",
+  "format-disconnected": "󰖪",
+
+  "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+  "tooltip-format-ethernet": "{ipaddr}",
+  "tooltip-format-disconnected": "Disconnected",
+
+  "on-click": "kitty -e nmtui"
+},
+  "battery": {
+    "format": " {capacity}%",
+    "format-charging": " {capacity}%",
+    "tooltip": true,
+    "tooltip-format": "{capacity}%\nTime: {time}\nPower: {power}W"
+  },
+
+  "tray": {
+    "spacing": 10
+  }
+}

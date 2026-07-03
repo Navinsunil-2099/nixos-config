@@ -1,0 +1,103 @@
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 16px;
+
+  min-height: 25px;   /* fixes icon clipping */
+}
+
+window#waybar {
+  background: #272E33;
+  color: #7FBBB3;
+}
+/*1a1b26*/
+/* remove all boxes */
+#custom-launcher,
+#workspaces,
+#clock,
+#pulseaudio,
+#cpu,
+#memory,
+#network,
+#battery,
+#tray {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* RIGHT SIDE SPACING (important) */
+#pulseaudio,
+#cpu,
+#memory,
+#network,
+#battery,
+#tray {
+  margin-left: 14px;
+}
+
+#custom-nixos {
+    margin-right: 16px;
+    margin-left: 12px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+#clock{
+  margin-right: 12px;
+}
+
+/* prevent wifi/battery clipping */
+#network {
+  padding-left: 2px;
+  padding-right: 8px;
+}
+
+#battery {
+  padding-left: 2px;
+}
+
+/* icon size */
+#pulseaudio,
+#cpu,
+#memory,
+#network,
+#battery,
+#custom-launcher {
+  font-size: 18px;
+}
+
+/* monochrome color */
+#pulseaudio,
+#cpu,
+#memory,
+#network,
+#battery,
+#clock,
+#custom-launcher {
+  color: #FFFFFF;
+}
+
+/* workspace styling */
+#workspaces button {
+    color: white;
+    background: transparent;
+    border: none;
+    border-radius: 0px;
+    padding: 0 8px;
+    margin: 2px;
+}
+
+#workspaces button.active {
+    background: white;
+    color: black;
+}
+/* subtle hover */
+#pulseaudio:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#battery:hover,
+#custom-launcher:hover {
+  color: #ffffff;
+}
+
