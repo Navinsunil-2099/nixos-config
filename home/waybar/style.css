@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-  background: #272E33;
+  background: #1D2021;
   color: #7FBBB3;
 }
 /*1a1b26*/
@@ -39,7 +39,7 @@ window#waybar {
     margin-right: 16px;
     margin-left: 12px;
     color: #ffffff;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 #clock{

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.enable = false;
 
   services.displayManager = {
     sddm = {
@@ -10,6 +10,11 @@
       wayland.enable = true;
       theme = "chili";
     };
+
+  };
+
+  services.displayManager = {
+    ly.enable = true;
 
     autoLogin = {
       enable = false;

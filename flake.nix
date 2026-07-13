@@ -6,11 +6,7 @@
 
     helium.url = "github:schembriaiden/helium-browser-nix-flake";
 
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell/v5";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -9,6 +9,7 @@
 input {
     keyboard {
         xkb {
+            //options "caps:swapescape"
             // You can set rules, model, layout, variant and options.
             // For more information, see xkeyboard-config(7).
 
@@ -111,7 +112,7 @@ output "eDP-1" {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 4
+    gaps 8
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -158,7 +159,7 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
-        //off
+        off
 
         // How many logical pixels the ring extends out from the windows.
         width 3
@@ -170,9 +171,9 @@ layout {
 
         // Color of the ring on the active monitor.
         //active-color "#7fc8ff"
-        active-color "#DBBC7F"
+        //active-color "#DBBC7F"
        //active-color "#81BD7F"
-       // active-color "#7DCFFF"
+        active-color "#A7A4B8"
         //active-color "#3119AB"
 
 
@@ -181,7 +182,7 @@ layout {
         // The focus ring only draws around the active window, so the only place
         // where you can see its inactive-color is on other monitors.
        // inactive-color "#505050"
-        inactive-color "#000000"
+        inactive-color "#1D2021"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -263,10 +264,10 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     //struts {
-    //    left 12 
-    //    right 12 
-    //    top 12 
-    //    bottom 12
+    //    left 4 
+    //    right 4 
+    //    top 4 
+    //    bottom 4
     //}
 }
 
@@ -328,6 +329,13 @@ window-rule {
     default-column-width {}
 }
 
+//window opacity rule made by meeeeee
+window-rule {
+    match is-active=false
+    opacity 0.8
+}
+
+
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
     // This app-id regular expression will work for both:
@@ -352,11 +360,14 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
-    geometry-corner-radius 12
+    geometry-corner-radius 8
     clip-to-geometry true
 }
 
 binds {
+
+    Mod+Shift+Delete { spawn "systemctl" "reboot"; }
+    Mod+Ctrl+Delete  { spawn "systemctl" "poweroff"; }
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
     // like wev.
@@ -375,7 +386,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "pkill fuzzel || fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "hyprlock"; }
-    Mod+B hotkey-overlay-title="opening browser: helium" { spawn "helium"; }
+    Mod+B hotkey-overlay-title="opening browser: zen" { spawn "zen"; }
     Mod+E hotkey-overlay-title="opening file manager:nautilus" { spawn "nautilus"; }
   
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.

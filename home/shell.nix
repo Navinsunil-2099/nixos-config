@@ -153,9 +153,11 @@
         "cd /etc/nixos && git log --oneline --graph --decorate -10";
     };
 
+
+    #inside this you can write fastfetch for fastfetch auto spawn
     interactiveShellInit = ''
       set -g fish_greeting
-      fastfetch
+      
     '';
 
     functions.fish_prompt = ''

@@ -13,9 +13,24 @@
     htop
     kitty
     fastfetch
+    freshfetch
+    honeyfetch
+    yazi
+    wlogout
+
+    #typing cli
+    smassh
+
+    #note app
+    obsidian
+    syncthing
+
+   
+
 
     # Programming & development
     git
+    openssh
     gcc
     temurin-bin-21
     gnumake
@@ -49,7 +64,7 @@
     waybar
     niri
 
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    #inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # X11
     xwayland-satellite
@@ -83,6 +98,10 @@
 
     # Fonts
     nerd-fonts.jetbrains-mono
+    nerd-fonts.caskaydia-mono
+    nerd-fonts.symbols-only
+    terminus_font_ttf
+    cozette
 
     btop
 
@@ -110,11 +129,55 @@
   programs.nix-ld.enable = true;
 
   programs.nix-ld.libraries = with pkgs; [
-    xorg.libXext
-    xorg.libXrender
-    xorg.libXtst
-    xorg.libXi
-    xorg.libXrandr
-    gtk3
+    # X11
+  libx11
+  libxext
+  libxrender
+  libxtst
+  libxi
+  libxrandr
+  libxcb
+  libxkbcommon
+  libxfixes
+  libxkbfile
+  libxcursor
+  libxdamage
+  libxcomposite
+  libbsd
+
+  libSM
+  libICE
+
+  
+  # Graphics
+  libGL
+  libdrm
+  mesa
+
+  # GTK / GLib
+  glib
+  gtk3
+
+  # Audio
+  libpulseaudio
+  alsa-lib
+
+  # Emulator / Chromium-style runtime dependencies
+  nss
+  nspr
+
+  # Images / compression
+  libpng
+  zlib
+
+  # Terminal / C++ runtime
+  ncurses
+  stdenv.cc.cc.lib
+
+  # Common runtime dependencies
+  dbus
+  expat
+  fontconfig
+  freetype
   ];
 }
