@@ -24,6 +24,7 @@
     #note app
     obsidian
     syncthing
+    quickshell
 
    
 
@@ -65,6 +66,7 @@
     niri
 
     #inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # X11
     xwayland-satellite

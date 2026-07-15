@@ -1,7 +1,8 @@
-{ ... }:
+{ inputs, ... }:
 
 {
   imports = [
+    inputs.dms.nixosModules.default
     ./hardware-configuration.nix
     ./modules
   ];

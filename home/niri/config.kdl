@@ -120,7 +120,7 @@ layout {
     // - "always", the focused column will always be centered.
     // - "on-overflow", focusing a column will center it if it doesn't fit
     //   together with the previously focused column.
-    center-focused-column "never"
+    center-focused-column "always"
     
     //open-maximized true 
     //always-center-single-column
@@ -162,7 +162,7 @@ layout {
         off
 
         // How many logical pixels the ring extends out from the windows.
-        width 3
+        width 4
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -173,7 +173,7 @@ layout {
         //active-color "#7fc8ff"
         //active-color "#DBBC7F"
        //active-color "#81BD7F"
-        active-color "#A7A4B8"
+        active-color "#8EC07C"
         //active-color "#3119AB"
 
 

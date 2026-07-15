@@ -1,7 +1,8 @@
-{ ... }:
+{ inputs, ... }:
 
 {
   imports = [
+    inputs.dms.homeModules.dank-material-shell
     ./packages.nix
     ./shell.nix
     ./git.nix

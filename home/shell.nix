@@ -157,7 +157,7 @@
     #inside this you can write fastfetch for fastfetch auto spawn
     interactiveShellInit = ''
       set -g fish_greeting
-      
+      fastfetch 
     '';
 
     functions.fish_prompt = ''
