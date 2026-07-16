@@ -10,7 +10,6 @@
     ./power.nix
     ./services.nix
     ./packages.nix
-    ./stylix.nix
   ];
 
   nix.settings.experimental-features = [

@@ -25,6 +25,7 @@
     obsidian
     syncthing
     quickshell
+    swayosd
 
    
 
